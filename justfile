@@ -92,6 +92,7 @@ release-docs-check:
     node website/scripts/docs-preview.mjs check
     @test -f docs/next/README.md
     @test -f docs/next/README.zh-CN.md
+    @test -f docs/next/README.ko.md
     @if ! diff -u CHANGELOG.md docs/next/CHANGELOG.md; then \
         echo "error: CHANGELOG.md differs from docs/next/CHANGELOG.md; finalize release notes before releasing"; \
         exit 1; \
